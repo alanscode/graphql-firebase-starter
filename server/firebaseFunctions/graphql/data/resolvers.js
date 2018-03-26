@@ -35,9 +35,6 @@ const resolveFunctions = {
         .then(snap => {
           return "OK"
         })
-    },
-    add(_,{x1, x2}){
-      return calculator.add(x1,x2)
     }
   }
 }

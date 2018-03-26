@@ -23,6 +23,7 @@ import gql from 'graphql-tag'
     },
     methods:{
       clicked(){        
+        debugger
         console.log('clicked')
       }
     },

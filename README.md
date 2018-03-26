@@ -5,30 +5,30 @@ MY GOTO "VEGN" STACK STARTER KIT
 Description:
 GraphQL server hosted in firebase functions 
 
-Server Stack:
+SERVER Stack:
 GraphQL
 Express
 Node
 Firebase real time DB
 
-Client Stack:
+CLIENT Stack:
 Vuejs
 Quasar Framework 
 Apollo 
 
 
-Get started
-CONFIGURE FIREBASE DB
+
+CONFIGURE FIREBASE DB:
 modify .firebaserc with your <project-id>
 
-STARTING SERVER
-Click start to run local nodemon server (use launch.json for vscode)
+STARTING SERVER:
+DEBUGGING: Click START to run local nodemon server (use launch.json for vscode)
 
-"yarn serve" for local firebase functions emulation
+FOR LOCAL FIREBASE FUNCTION EMULATION: "yarn serve" 
 
-"yarn deploy" for deployment
+DEPLOYMENT: "yarn deploy" 
 
 
 STARTING CLIENT SERVER
-"quasar dev"
+"quasar dev -t ios"
 
