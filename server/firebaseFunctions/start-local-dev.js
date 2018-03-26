@@ -4,5 +4,5 @@ import setupGraphQLServer from "./graphql/server"
 const graphQLServer = setupGraphQLServer()
 
 graphQLServer.listen(4200,()=>{
-    console.log("<<< Listening on 4200 >>>")
+    console.log("<<< Graphql server running at on http://localhost:4200/graphiql >>>")
 })

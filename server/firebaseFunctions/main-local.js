@@ -3,4 +3,4 @@ require('babel-register')({
 })
 
 // Import the rest of our application.
-module.exports = require('./local.js')
+module.exports = require('./start-local-dev.js')
