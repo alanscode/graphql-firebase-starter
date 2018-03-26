@@ -3,13 +3,13 @@ const firebase = require("../../firebase")
 const resolveFunctions = {
   Query: {
     once(_, { path }) {
-      console.log('once hit')
+      console.log('>>> once query')
       return firebase
         .database()
         .ref(path)
         .once("value")
         .then(snap => {
-          console.log(snap)
+          console.log(snap.val())
           return JSON.stringify(snap.val())
         })
     }
