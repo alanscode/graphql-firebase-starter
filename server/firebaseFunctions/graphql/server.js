@@ -1,9 +1,9 @@
-import bodyParser from "body-parser"
-import express from "express"
-import cors from "cors"
-import { graphqlExpress, graphiqlExpress } from "apollo-server-express"
-import schema from "./data/schema"
-import { printSchema } from "graphql/utilities/schemaPrinter"
+const bodyParser = require("body-parser")
+const express = require("express")
+const cors = require("cors")
+const { graphqlExpress, graphiqlExpress } = require("apollo-server-express")
+const schema = require("./data/schema")
+const { printSchema } = require("graphql/utilities/schemaPrinter")
 
 const setupGraphQLServer = () => {
   // setup server
@@ -28,4 +28,4 @@ const setupGraphQLServer = () => {
   return graphQLServer
 }
 
-export default setupGraphQLServer
+module.exports = setupGraphQLServer

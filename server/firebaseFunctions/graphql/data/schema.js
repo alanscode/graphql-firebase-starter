@@ -1,6 +1,6 @@
-import { makeExecutableSchema } from "graphql-tools"
+const { makeExecutableSchema } = require("graphql-tools")
 
-import resolvers from "./resolvers"
+const resolvers = require("./resolvers")
 
 const schema = `
 
@@ -13,10 +13,11 @@ type Query {
 type Mutation {
   set(path: String!, json: String!) : String
   push(path: String!, json: String!) : String
+  add(x1: Int!, x2: Int!) : Int
 }
 `
 
-export default makeExecutableSchema({
+module.exports = makeExecutableSchema({
   typeDefs: schema,
   resolvers
 })

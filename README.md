@@ -1,23 +1,24 @@
 
 
-"VEGN" STACK STARTER KIT 
+MY GOTO "VEGN" STACK STARTER KIT 
 
+Description:
 GraphQL server hosted in firebase functions 
 
-Server Stack
+Server Stack:
 GraphQL
 Express
 Node
 Firebase real time DB
 
-Client Stack
+Client Stack:
 Vuejs
 Quasar Framework 
 Apollo 
 
 
 Get started
-CONFIGURE
+CONFIGURE FIREBASE DB
 modify .firebaserc with your <project-id>
 
 STARTING SERVER

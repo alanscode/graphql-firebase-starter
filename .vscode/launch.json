@@ -10,7 +10,7 @@
     "request": "launch",
     "name": "nodemon",
     "runtimeExecutable": "nodemon",
-    "program": "${workspaceFolder}/server/firebaseFunctions/main-local.js",
+    "program": "${workspaceFolder}/server/firebaseFunctions/start-local-dev.js",
     "restart": true,
     "console": "integratedTerminal",
     "internalConsoleOptions": "neverOpen",
