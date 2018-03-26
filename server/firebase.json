@@ -1,0 +1,8 @@
+{
+  "functions": {
+    "source": "dist/functions"
+  },
+  "database": {
+    "rules": "database.rules.json"
+  }
+}
