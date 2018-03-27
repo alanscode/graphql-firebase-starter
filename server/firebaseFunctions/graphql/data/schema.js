@@ -12,8 +12,11 @@ type Query {
 
 type Mutation {
   set(path: String!, json: String!) : String
-  push(path: String!, json: String!) : String
-  add(x1: Int!, x2: Int!) : Int
+  push(path: String!, json: String!) : String  
+}
+
+type Subscription{
+  autoincrement: String
 }
 `
 

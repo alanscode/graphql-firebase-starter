@@ -5,4 +5,4 @@ const setupGraphQLServer = require("./graphql/server")
 const graphQLServer = setupGraphQLServer()
 
 // https://us-central1-<project-name>.cloudfunctions.net/api
-module.export.api = https.onRequest(graphQLServer)
+module.exports.api = https.onRequest(graphQLServer)

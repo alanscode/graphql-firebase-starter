@@ -1,5 +1,7 @@
 const firebase = require("../../firebase")
+const {PubSub} = require('graphql-subscriptions')
 
+const pubsub = new PubSub()
 const resolveFunctions = {
   Query: {
     once(_, { path }) {
@@ -35,6 +37,16 @@ const resolveFunctions = {
         .then(snap => {
           return "OK"
         })
+    }
+  },
+  Subscription:{
+    autoincrement:{
+      subscribe:()=>{        
+        setInterval(()=>{          
+          pubsub.publish('can_be_anything',{autoincrement:`time is now ${Date.now()}`})
+        }, 100)
+        return pubsub.asyncIterator('can_be_anything')
+      }
     }
   }
 }
