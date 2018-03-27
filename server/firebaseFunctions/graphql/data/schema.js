@@ -17,6 +17,7 @@ type Mutation {
 
 type Subscription{
   autoincrement: String
+  pokerlogs: String
 }
 `
 

@@ -1,11 +1,11 @@
 const firebase = require("../../firebase")
-const {PubSub} = require('graphql-subscriptions')
+const { PubSub } = require("graphql-subscriptions")
 
 const pubsub = new PubSub()
 const resolveFunctions = {
   Query: {
     once(_, { path }) {
-      console.log('>>> once query')
+      console.log(">>> once query")
       return firebase
         .database()
         .ref(path)
@@ -39,13 +39,26 @@ const resolveFunctions = {
         })
     }
   },
-  Subscription:{
-    autoincrement:{
-      subscribe:()=>{        
-        setInterval(()=>{          
-          pubsub.publish('can_be_anything',{autoincrement:`time is now ${Date.now()}`})
+  Subscription: {
+    autoincrement: {
+      subscribe: () => {
+        setInterval(() => {
+          pubsub.publish("can_be_anything", {
+            autoincrement: `time is now ${Date.now()}`
+          })
         }, 100)
-        return pubsub.asyncIterator('can_be_anything')
+        return pubsub.asyncIterator("can_be_anything")
+      }
+    },
+    pokerlogs: {
+      subscribe: () => {
+        firebase.database().ref("pokerlogs").on("value", snap => {
+          pubsub.publish("pokerlog_update", {
+            pokerlogs: JSON.stringify(snap.val())
+          })
+        })
+
+        return pubsub.asyncIterator("pokerlog_update")
       }
     }
   }
