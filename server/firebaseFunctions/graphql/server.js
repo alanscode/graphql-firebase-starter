@@ -20,12 +20,6 @@ const setupGraphQLServer = () => {
     })
   )
 
-  // /api/schema
-  server.use("/schema", (req, res) => {
-    res.set("Content-Type", "text/plain")
-    res.send(printSchema(schema))
-  })
-
   return server
 }
 

@@ -1,5 +1,4 @@
 const schema = require("./graphql/data/schema")
-const cors = require("cors")
 const { execute, subscribe } = require("graphql")
 const { createServer } = require("http")
 const { SubscriptionServer } = require("subscriptions-transport-ws")
