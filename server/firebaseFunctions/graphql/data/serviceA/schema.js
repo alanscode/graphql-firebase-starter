@@ -4,7 +4,7 @@ const resolvers = require("./resolvers")
 
 const schema = `
   type Query {
-    ImTheRoot: String
+    ImServiceA: String
   }
 
 `

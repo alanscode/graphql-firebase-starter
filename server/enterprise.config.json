@@ -1,7 +1,0 @@
-{
-    "dev": "http://localhost:5000",
-    "subdev": "ws://localhost:4200/subscriptions",
-    "emudev": "http://localhost:5000",
-    "prod": "https://us-central1-helloworld-5d0f4.cloudfunctions.net/api/graphiq",
-    "subprod": "TBD"
-}

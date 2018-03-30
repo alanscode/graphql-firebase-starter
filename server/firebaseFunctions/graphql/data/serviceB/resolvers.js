@@ -7,8 +7,8 @@ const pubsub = new PubSub()
 
 const resolveFunctions = {
   Query: {
-    ImTheRoot(){
-      return "the roots man!!!!"
+    ImServiceB(){
+      return "the service BBB"
     }
   }
 }
